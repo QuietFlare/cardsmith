@@ -1,0 +1,18 @@
+{
+  "qa": [
+    {
+      "text": "Ribosomes are the cell's protein factories. They read messenger RNA and join amino acids into a chain. Ribosomes are found free in the cytoplasm or attached to the rough endoplasmic reticulum.",
+      "cards": "What do ribosomes make? | Proteins\nWhat do ribosomes read? | Messenger RNA\nWhere are ribosomes found? | Free in the cytoplasm or on the rough endoplasmic reticulum"
+    }
+  ],
+  "vocab": [
+    {
+      "text": "Ich kümmere mich um das Problem.",
+      "cards": "sich kümmern um (+ Akk.) | to take care of"
+    },
+    {
+      "text": "Ich nehme an dem Meeting teil.",
+      "cards": "teilnehmen an (+ Dat.) | to take part in"
+    }
+  ]
+}

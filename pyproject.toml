@@ -1,0 +1,25 @@
+[project]
+name = "cardsmith"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ramanse", email = "seema_rj@hotmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.14.1",
+    "transformers>=5.20.2",
+]
+
+[project.scripts]
+cardsmith = "cardsmith:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

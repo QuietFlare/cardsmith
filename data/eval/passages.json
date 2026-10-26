@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sci-mitochondria",
+    "subject": "science",
+    "language": "en",
+    "kind": "qa",
+    "text": "Mitochondria are organelles that produce most of the cell's energy. They make ATP through a process called oxidative phosphorylation. Mitochondria have their own DNA, which is inherited from the mother.",
+    "facts": [
+      "Mitochondria produce most of the cell's energy",
+      "Mitochondria make ATP through oxidative phosphorylation",
+      "Mitochondrial DNA is inherited from the mother"
+    ]
+  },
+  {
+    "id": "de-melden",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "text": "Ich melde mich morgen bei dem Kunden.",
+    "expected": "sich melden bei (+ Dat.) | to get in touch with"
+  },
+  {
+    "id": "de-bewerben",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "text": "Ich habe mich um die Stelle beworben.",
+    "expected": "sich bewerben um (+ Akk.) | to apply for"
+  },
+  {
+    "id": "de-abhaengen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "text": "Das hängt vom Budget ab.",
+    "expected": "abhängen von (+ Dat.) | to depend on"
+  }
+]
