@@ -1,0 +1,20 @@
+name: compliance
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
+jobs:
+  compliance:
+    uses: QuietFlare/ci-workflows/.github/workflows/compliance-review.yml@v1.7.0
+    with:
+      data-paths: data
+      data-register: docs/data-sources.md
+      tools-ref: v1.7.0
+    secrets:
+      anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
