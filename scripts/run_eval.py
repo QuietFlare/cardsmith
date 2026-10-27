@@ -1,7 +1,7 @@
-"""Run one baseline model over the eval passages and save what it wrote.
+"""Run one model over the eval passages and save what it wrote.
 
-    uv run python scripts/run_baseline.py qwen3
-    uv run python scripts/run_baseline.py qwen
+    uv run python scripts/run_eval.py qwen3
+    uv run python scripts/run_eval.py qwen
 
 Writes results/<name>.jsonl, one line per passage. Every line names the model
 revision and the data version, so a result can be traced to exactly what made it.
