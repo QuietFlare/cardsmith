@@ -1,0 +1,23 @@
+# Review every pull request against the agreed design in docs/: the diagram, rules.md and
+# map.yml. The lint and the module mapping run with no secret. The review itself needs the
+# Claude GitHub App on this repo and the ANTHROPIC_API_KEY secret the compliance review already
+# uses; until then it is skipped with a warning.
+name: design
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  design:
+    uses: QuietFlare/ci-workflows/.github/workflows/design-review.yml@v1.7.0
+    with:
+      spec-dir: docs
+      tools-ref: v1.7.0
+    secrets:
+      anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
