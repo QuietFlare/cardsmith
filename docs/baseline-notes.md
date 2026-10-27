@@ -1,6 +1,6 @@
 # Baseline notes
 
-Date: 26 October 2026. All runs use `scripts/run_baseline.py`, greedy decoding, max 200 new tokens, and the same passages from `data/eval/passages.json`:
+Date: 26 October 2026. All runs use `scripts/run_eval.py`, greedy decoding, max 200 new tokens, and the same passages from `data/eval/passages.json`:
 
 1. English science, written for this test: mitochondria produce energy, make ATP by oxidative phosphorylation, have their own DNA inherited from the mother.
 2. Three German example sentences from my Anki deck (`deutsch/anki-alltag.txt`): "Ich melde mich morgen bei dem Kunden.", "Ich habe mich um die Stelle beworben.", "Das hängt vom Budget ab."
