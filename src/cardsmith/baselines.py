@@ -12,9 +12,10 @@ PROMPTS = {
         "One card per line, as: question | answer\n\nText: "
     ),
     "vocab": (
-        "This is a German example sentence. Find the verb phrase a learner should "
-        "memorise, with its preposition and case, and translate it to English. "
-        "Answer with one line, as: German phrase | English meaning\n\nSentence: "
+        "This is a German example sentence. Write a flash card for the word or phrase "
+        "a learner should memorise from it, in dictionary form: a verb in the infinitive "
+        "with its preposition and case, a noun with its article and plural, or a "
+        "connecting word or set phrase. Answer with one line, as: German | English\n\nSentence: "
     ),
 }
 
@@ -73,4 +74,7 @@ MODELS = {
     "qwen3-fewshot": lambda: ChatModel(
         "Qwen/Qwen3-0.6B", load_examples(), template_options={"enable_thinking": False}
     ),
+    # Trained with German and the other EU languages from the start, unlike the Qwen models.
+    "eurollm": lambda: ChatModel("utter-project/EuroLLM-1.7B-Instruct"),
+    "eurollm-fewshot": lambda: ChatModel("utter-project/EuroLLM-1.7B-Instruct", load_examples()),
 }

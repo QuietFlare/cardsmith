@@ -1,6 +1,7 @@
 """The scorer decides what counts as good, so it gets tests of its own."""
 from cardsmith.score import (
-    duplicates, facts_covered, format_ok, parse_cards, score, too_long, vocab_match,
+    duplicates, facts_covered, format_ok, head_words, parse_cards, score, too_long, vocab_match,
+    card_correct, word_match,
 )
 
 FACTS = [
@@ -66,7 +67,8 @@ def test_score_reports_the_checks_for_the_passage_kind():
     record = score(passage, "warten auf (+ Akk.) | to wait for")
     assert record == {
         "passage": "de-x", "kind": "vocab", "cards": 1, "format_ok": True,
-        "duplicates": 0, "too_long": 0, "phrase_match": True, "meaning_match": True,
+        "duplicates": 0, "too_long": 0, "category": "", "phrase_match": True,
+        "meaning_match": True, "word_match": True, "correct": True,
     }
 
 
@@ -79,3 +81,46 @@ def test_a_format_word_as_the_question_is_not_a_card():
     assert parse_cards(output) == []
     assert not format_ok(output)
     assert facts_covered(parse_cards(output), FACTS) == 0
+
+
+def test_head_words_drop_articles_plurals_and_case_notes():
+    assert head_words("der Termin, -e") == [{"termin"}]
+    assert head_words("sich melden bei (+ Dat.)") == [{"melden", "bei"}]
+    assert head_words("deswegen / deshalb") == [{"deswegen"}, {"deshalb"}]
+    assert head_words("aufwachen (ist aufgewacht)") == [{"aufwachen"}]
+
+
+def test_word_match_forgives_missing_grammar_but_not_a_conjugated_form():
+    assert word_match([("Termin", "appointment")], "der Termin, -e | appointment")
+    assert word_match([("deshalb", "therefore")], "deswegen / deshalb | therefore")
+    assert not word_match([("melde mich bei", "to contact")], "sich melden bei (+ Dat.) | to get in touch with")
+    assert not word_match([("Budget", "budget")], "abhängen von (+ Dat.) | to depend on")
+
+
+def test_word_match_refuses_a_chunk_of_the_sentence():
+    # Qwen3 0.6B few-shot, 27 Oct 2026: the right word inside a copied clause.
+    assert not word_match([("bevor ich antworte (+ Dat.)", "to respond before reading")], "bevor | before")
+    assert not word_match([("entscheiden + für + einfache Lösung", "decide")], "sich entscheiden für (+ Akk.) | to decide on")
+    assert word_match([("Verantwortung haben (+ Dat.)", "to bear responsibility")], "die Verantwortung | responsibility")
+
+
+def test_a_right_meaning_on_the_wrong_word_is_not_correct():
+    # Qwen2.5 0.5B few-shot, 27 Oct 2026: "vergleichen" means to compare.
+    passage = {"id": "de-v", "kind": "vocab", "expected": "vereinbaren | to arrange, to agree on"}
+    record = score(passage, "vergleichen können (+ Dat.) | to agree on")
+    assert record["meaning_match"] and not record["word_match"] and not record["correct"]
+
+
+def test_the_right_verb_with_the_wrong_case_is_not_correct():
+    # Qwen3 0.6B few-shot, 27 Oct 2026: "erinnern an" takes the accusative.
+    expected = "sich erinnern an (+ Akk.) | to remember"
+    assert not card_correct(("sich erinnern an (+ Dat.)", "to remember in the past"), expected)
+    assert card_correct(("sich erinnern an (+ Akk.)", "to remember"), expected)
+    assert card_correct(("Erfahrung", "to have experience"), "die Erfahrung, -en | experience")
+
+
+def test_an_invented_case_note_without_a_plus_is_still_a_case():
+    # EuroLLM 1.7B few-shot, 27 Oct 2026: grammar notes a noun or adjective does not have.
+    assert not card_correct(("krankenkasse (Dat.)", "health insurance"), "die Krankenkasse, -n | health insurance")
+    assert not card_correct(("zuverlässig (Dat.)", "reliable"), "zuverlässig | reliable")
+    assert card_correct(("warten auf (+ Acc.)", "to wait for"), "warten auf (+ Akk.) | to wait for")

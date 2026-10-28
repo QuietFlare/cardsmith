@@ -24,7 +24,7 @@ def normalise(text):
 
 # The format lines from the prompts. A model that copies one back, or uses one of its
 # words as a question ("question | <a sentence>"), has written a label, not a card.
-FORMATS = ["question | answer", "German phrase | English meaning"]
+FORMATS = ["question | answer", "German | English", "German phrase | English meaning"]
 LABELS = {normalise(side) for line in FORMATS for side in line.split("|")}
 
 
@@ -90,6 +90,65 @@ def vocab_match(cards, expected):
     return phrase, meaning
 
 
+ARTICLES = {"der", "die", "das", "sich"}
+
+
+def head_words(german):
+    """The words a card must name, without the grammar notes around them.
+
+    'der Termin, -e' gives {'termin'}, 'sich melden bei (+ Dat.)' gives {'melden', 'bei'},
+    'deswegen / deshalb' gives either alternative.
+    """
+    core = re.sub(r"\(.*?\)", " ", german.split(",")[0])
+    return [
+        {w for w in normalise(alt).split() if w not in ARTICLES}
+        for alt in core.split("/")
+    ]
+
+
+# Grammar notes a card may add without saying anything new: "+", case and plural markers.
+GRAMMAR = ARTICLES | {"+", "dat", "akk", "gen", "pl", "ist", "hat"}
+
+
+def word_match(cards, expected):
+    """Looser than vocab_match: the card names the right word, whatever grammar it adds or drops.
+
+    At most one extra word is allowed, so "Verantwortung haben" counts for "die Verantwortung"
+    but a chunk of the sentence ("bevor ich antworte") does not count for "bevor".
+    """
+    want_front = expected.split("|")[0]
+    for front, _ in cards:
+        said = set(normalise(front).split())
+        for words in head_words(want_front):
+            if words and words <= said and len(said - words - GRAMMAR) <= 1:
+                return True
+    return False
+
+
+def cases(text):
+    """The case notes in order: 'sprechen mit (+ Dat.) über (+ Akk.)' gives ['dat', 'akk'].
+
+    With or without the '+', and the English 'Acc.' counts as 'akk', so an invented
+    '(Dat.)' on a noun is caught as well as a wrong '(+ Dat.)' on a verb.
+    """
+    found = re.findall(r"\b(dat|akk|acc|gen)\b", text, re.IGNORECASE)
+    return ["akk" if c.lower() == "acc" else c.lower() for c in found]
+
+
+def card_correct(card, expected):
+    """One card that is right as a whole: the word, its meaning, and for a verb its cases.
+
+    A guessed meaning on the wrong word is not right, and neither is the right verb with
+    the wrong case, which is the mistake a learner most needs the card to prevent.
+    """
+    want_front = expected.split("|")[0]
+    return (
+        word_match([card], expected)
+        and vocab_match([card], expected)[1]
+        and cases(card[0]) == cases(want_front)
+    )
+
+
 def score(passage, output):
     """All the checks for one passage, as one flat record."""
     cards = parse_cards(output)
@@ -105,5 +164,8 @@ def score(passage, output):
         record["facts_covered"] = facts_covered(cards, passage["facts"])
         record["facts_total"] = len(passage["facts"])
     if passage["kind"] == "vocab":
+        record["category"] = passage.get("category", "")
         record["phrase_match"], record["meaning_match"] = vocab_match(cards, passage["expected"])
+        record["word_match"] = word_match(cards, passage["expected"])
+        record["correct"] = any(card_correct(card, passage["expected"]) for card in cards)
     return record

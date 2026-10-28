@@ -12,27 +12,894 @@
     ]
   },
   {
-    "id": "de-melden",
+    "id": "de-sich-melden-bei",
     "subject": "language",
     "language": "de",
     "kind": "vocab",
+    "category": "verb+case",
     "text": "Ich melde mich morgen bei dem Kunden.",
     "expected": "sich melden bei (+ Dat.) | to get in touch with"
   },
   {
-    "id": "de-bewerben",
+    "id": "de-sich-bewerben-um",
     "subject": "language",
     "language": "de",
     "kind": "vocab",
+    "category": "verb+case",
     "text": "Ich habe mich um die Stelle beworben.",
     "expected": "sich bewerben um (+ Akk.) | to apply for"
   },
   {
-    "id": "de-abhaengen",
+    "id": "de-abhaengen-von",
     "subject": "language",
     "language": "de",
     "kind": "vocab",
+    "category": "verb+case",
     "text": "Das hängt vom Budget ab.",
     "expected": "abhängen von (+ Dat.) | to depend on"
+  },
+  {
+    "id": "de-sich-verlassen-auf",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Sie können sich auf mich verlassen.",
+    "expected": "sich verlassen auf (+ Akk.) | to rely on"
+  },
+  {
+    "id": "de-sich-freuen-auf",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich freue mich auf das Gespräch.",
+    "expected": "sich freuen auf (+ Akk.) | to look forward to"
+  },
+  {
+    "id": "de-sich-freuen-ueber",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich freue mich über die Rückmeldung.",
+    "expected": "sich freuen über (+ Akk.) | to be glad about"
+  },
+  {
+    "id": "de-sich-beschaeftigen-mit",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich beschäftige mich mit Agenten.",
+    "expected": "sich beschäftigen mit (+ Dat.) | to deal with, to work on"
+  },
+  {
+    "id": "de-sich-entscheiden-fuer",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Wir haben uns für die einfache Lösung entschieden.",
+    "expected": "sich entscheiden für (+ Akk.) | to decide on"
+  },
+  {
+    "id": "de-sich-vorbereiten-auf",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich bereite mich auf das Interview vor.",
+    "expected": "sich vorbereiten auf (+ Akk.) | to prepare for"
+  },
+  {
+    "id": "de-sich-erinnern-an",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Erinnern Sie sich an unser Gespräch?",
+    "expected": "sich erinnern an (+ Akk.) | to remember"
+  },
+  {
+    "id": "de-denken-an",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich denke an den Termin.",
+    "expected": "denken an (+ Akk.) | to think of"
+  },
+  {
+    "id": "de-warten-auf",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich warte auf eine Antwort.",
+    "expected": "warten auf (+ Akk.) | to wait for"
+  },
+  {
+    "id": "de-sprechen-mit-ueber",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich habe mit dem Kunden über den Preis gesprochen.",
+    "expected": "sprechen mit (+ Dat.) über (+ Akk.) | to talk to someone about"
+  },
+  {
+    "id": "de-sich-bedanken-bei-fuer",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich bedanke mich bei Ihnen für die Einladung.",
+    "expected": "sich bedanken bei (+ Dat.) für (+ Akk.) | to thank someone for"
+  },
+  {
+    "id": "de-sich-beschweren-ueber",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Der Kunde hat sich über die Verzögerung beschwert.",
+    "expected": "sich beschweren über (+ Akk.) | to complain about"
+  },
+  {
+    "id": "de-sorgen-fuer",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich sorge dafür, dass die Tests laufen.",
+    "expected": "sorgen für (+ Akk.) | to ensure, to take care of"
+  },
+  {
+    "id": "de-sich-gewoehnen-an",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich habe mich an das Tool gewöhnt.",
+    "expected": "sich gewöhnen an (+ Akk.) | to get used to"
+  },
+  {
+    "id": "de-bestehen-aus",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Das Team besteht aus drei Leuten.",
+    "expected": "bestehen aus (+ Dat.) | to consist of"
+  },
+  {
+    "id": "de-der-termin",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Der Termin findet morgen um zehn statt.",
+    "expected": "der Termin, -e | appointment"
+  },
+  {
+    "id": "de-die-besprechung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Die Besprechung dauert eine Stunde.",
+    "expected": "die Besprechung, -en | meeting"
+  },
+  {
+    "id": "de-der-auftrag",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Ich habe den Auftrag bekommen.",
+    "expected": "der Auftrag, Aufträge | job, order, contract"
+  },
+  {
+    "id": "de-der-auftraggeber",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Der Auftraggeber hat das Angebot angenommen.",
+    "expected": "der Auftraggeber, - | client (who commissions)"
+  },
+  {
+    "id": "de-das-angebot",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Ich schicke Ihnen heute das Angebot.",
+    "expected": "das Angebot, -e | offer, quote"
+  },
+  {
+    "id": "de-die-rechnung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Die Rechnung kommt nächste Woche.",
+    "expected": "die Rechnung, -en | invoice"
+  },
+  {
+    "id": "de-die-rueckmeldung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Ich warte noch auf Rückmeldung.",
+    "expected": "die Rückmeldung, -en | feedback, reply"
+  },
+  {
+    "id": "de-die-bewerbung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Alle Bewerbungen brauchen C1-Niveau.",
+    "expected": "die Bewerbung, -en | application"
+  },
+  {
+    "id": "de-das-vorstellungsgespraech",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Das Vorstellungsgespräch lief gut.",
+    "expected": "das Vorstellungsgespräch, -e | job interview"
+  },
+  {
+    "id": "de-die-erfahrung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Ich habe zehn Jahre Erfahrung.",
+    "expected": "die Erfahrung, -en | experience"
+  },
+  {
+    "id": "de-die-kenntnisse",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Gute Deutschkenntnisse sind erforderlich.",
+    "expected": "die Kenntnisse (Pl.) | knowledge, skills"
+  },
+  {
+    "id": "de-die-verantwortung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Ich hatte die Verantwortung für die Plattform.",
+    "expected": "die Verantwortung | responsibility"
+  },
+  {
+    "id": "de-die-entscheidung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Wir müssen eine Entscheidung treffen.",
+    "expected": "die Entscheidung, -en | decision"
+  },
+  {
+    "id": "de-die-loesung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Das ist die einfachste Lösung.",
+    "expected": "die Lösung, -en | solution"
+  },
+  {
+    "id": "de-die-anforderung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Die Anforderungen haben sich geändert.",
+    "expected": "die Anforderung, -en | requirement"
+  },
+  {
+    "id": "de-die-voraussetzung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Erfahrung ist Voraussetzung.",
+    "expected": "die Voraussetzung, -en | prerequisite"
+  },
+  {
+    "id": "de-der-vorschlag",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Ich habe einen Vorschlag.",
+    "expected": "der Vorschlag, Vorschläge | suggestion"
+  },
+  {
+    "id": "de-die-verzoegerung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Es gab eine Verzögerung.",
+    "expected": "die Verzögerung, -en | delay"
+  },
+  {
+    "id": "de-die-frist",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Die Frist endet am Freitag.",
+    "expected": "die Frist, -en | deadline"
+  },
+  {
+    "id": "de-der-zeitraum",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "In diesem Zeitraum war ich bei Mercedes.",
+    "expected": "der Zeitraum, -räume | period of time"
+  },
+  {
+    "id": "de-die-zusammenarbeit",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Ich freue mich auf die Zusammenarbeit.",
+    "expected": "die Zusammenarbeit | collaboration"
+  },
+  {
+    "id": "de-der-ansprechpartner",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Wer ist mein Ansprechpartner?",
+    "expected": "der Ansprechpartner, - | contact person"
+  },
+  {
+    "id": "de-die-unterlagen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Ich schicke die Unterlagen heute.",
+    "expected": "die Unterlagen (Pl.) | documents"
+  },
+  {
+    "id": "de-der-lebenslauf",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Mein Lebenslauf ist auf zwei Seiten.",
+    "expected": "der Lebenslauf, -läufe | CV"
+  },
+  {
+    "id": "de-die-selbststaendigkeit",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Seit Juli bin ich in der Selbstständigkeit.",
+    "expected": "die Selbstständigkeit | self-employment"
+  },
+  {
+    "id": "de-die-krankenkasse",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Ich zahle die Krankenkasse selbst.",
+    "expected": "die Krankenkasse, -n | health insurance"
+  },
+  {
+    "id": "de-die-steuererklaerung",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Die Steuererklärung ist fällig.",
+    "expected": "die Steuererklärung, -en | tax return"
+  },
+  {
+    "id": "de-der-vertrag",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "noun",
+    "text": "Der Vertrag läuft sechs Monate.",
+    "expected": "der Vertrag, Verträge | contract"
+  },
+  {
+    "id": "de-vereinbaren",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Können wir einen Termin vereinbaren?",
+    "expected": "vereinbaren | to arrange, to agree on"
+  },
+  {
+    "id": "de-verschieben",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Wir haben das Projekt verschoben.",
+    "expected": "verschieben | to postpone"
+  },
+  {
+    "id": "de-absagen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Der Kunde hat den Termin abgesagt.",
+    "expected": "absagen | to cancel"
+  },
+  {
+    "id": "de-zusagen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Ich habe zugesagt.",
+    "expected": "zusagen | to accept, to confirm"
+  },
+  {
+    "id": "de-erledigen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Das erledige ich heute.",
+    "expected": "erledigen | to get done"
+  },
+  {
+    "id": "de-klaeren",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Das müssen wir noch klären.",
+    "expected": "klären | to clarify"
+  },
+  {
+    "id": "de-besprechen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Das besprechen wir morgen.",
+    "expected": "besprechen | to discuss"
+  },
+  {
+    "id": "de-vorschlagen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Ich schlage Dienstag vor.",
+    "expected": "vorschlagen | to suggest"
+  },
+  {
+    "id": "de-nachfragen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Ich frage beim Recruiter nach.",
+    "expected": "nachfragen | to ask, to follow up"
+  },
+  {
+    "id": "de-mitteilen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Bitte teilen Sie mir das Ergebnis mit.",
+    "expected": "mitteilen | to inform"
+  },
+  {
+    "id": "de-beruecksichtigen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Das habe ich nicht berücksichtigt.",
+    "expected": "berücksichtigen | to take into account"
+  },
+  {
+    "id": "de-umsetzen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Wir setzen die Änderung nächste Woche um.",
+    "expected": "umsetzen | to implement"
+  },
+  {
+    "id": "de-einschaetzen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Wie schätzen Sie den Aufwand ein?",
+    "expected": "einschätzen | to estimate, to assess"
+  },
+  {
+    "id": "de-sich-lohnen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Der Kurs lohnt sich.",
+    "expected": "sich lohnen | to be worth it"
+  },
+  {
+    "id": "de-auffallen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Mir ist ein Fehler aufgefallen.",
+    "expected": "auffallen | to notice, to stand out"
+  },
+  {
+    "id": "de-sich-auskennen-mit",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb+case",
+    "text": "Ich kenne mich mit Kubernetes aus.",
+    "expected": "sich auskennen mit (+ Dat.) | to know one's way around"
+  },
+  {
+    "id": "de-anbieten",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Ich biete vier Tage pro Woche an.",
+    "expected": "anbieten | to offer"
+  },
+  {
+    "id": "de-uebernehmen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Ich übernehme die Aufgabe.",
+    "expected": "übernehmen | to take over, to take on"
+  },
+  {
+    "id": "de-verbessern",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Ich will mein Deutsch verbessern.",
+    "expected": "verbessern | to improve"
+  },
+  {
+    "id": "de-aufwachen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "verb",
+    "text": "Ich bin zu früh aufgewacht.",
+    "expected": "aufwachen (ist aufgewacht) | to wake up"
+  },
+  {
+    "id": "de-deswegen-deshalb",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Ich brauche C1, deswegen lerne ich täglich.",
+    "expected": "deswegen / deshalb | therefore (verb comes right after)"
+  },
+  {
+    "id": "de-trotzdem",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Es war spät, trotzdem habe ich gelernt.",
+    "expected": "trotzdem | nevertheless (verb comes right after)"
+  },
+  {
+    "id": "de-allerdings",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Das stimmt, allerdings fehlt noch ein Test.",
+    "expected": "allerdings | however"
+  },
+  {
+    "id": "de-ausserdem",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Außerdem brauche ich die Unterlagen.",
+    "expected": "außerdem | besides, moreover"
+  },
+  {
+    "id": "de-zwar-aber",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Ich bin zwar müde, aber ich mache weiter.",
+    "expected": "zwar ... aber | admittedly ... but"
+  },
+  {
+    "id": "de-sobald",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Ich melde mich, sobald ich die Antwort habe.",
+    "expected": "sobald | as soon as (verb at end)"
+  },
+  {
+    "id": "de-solange",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Solange der Test läuft, warte ich.",
+    "expected": "solange | as long as (verb at end)"
+  },
+  {
+    "id": "de-bevor",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Bevor ich antworte, lese ich die Mail noch einmal.",
+    "expected": "bevor | before (verb at end)"
+  },
+  {
+    "id": "de-nachdem",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Nachdem ich gelernt habe, gehe ich raus.",
+    "expected": "nachdem | after (verb at end)"
+  },
+  {
+    "id": "de-obwohl",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Obwohl es spät war, bin ich gekommen.",
+    "expected": "obwohl | although (verb at end)"
+  },
+  {
+    "id": "de-damit",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Ich lerne, damit ich besser reden kann.",
+    "expected": "damit | so that (verb at end)"
+  },
+  {
+    "id": "de-falls",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Falls Sie Fragen haben, melden Sie sich.",
+    "expected": "falls | in case (verb at end)"
+  },
+  {
+    "id": "de-entweder-oder",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Entweder heute oder morgen.",
+    "expected": "entweder ... oder | either ... or"
+  },
+  {
+    "id": "de-weder-noch",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Weder der Kunde noch der Recruiter hat geantwortet.",
+    "expected": "weder ... noch | neither ... nor"
+  },
+  {
+    "id": "de-je-desto",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Je mehr ich spreche, desto besser wird es.",
+    "expected": "je ... desto | the ... the"
+  },
+  {
+    "id": "de-grundsaetzlich",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Grundsätzlich bin ich flexibel.",
+    "expected": "grundsätzlich | in principle, generally"
+  },
+  {
+    "id": "de-ehrlich-gesagt",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Ehrlich gesagt war das Gespräch schwierig.",
+    "expected": "ehrlich gesagt | honestly"
+  },
+  {
+    "id": "de-meiner-meinung-nach",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Meiner Meinung nach ist das zu komplex.",
+    "expected": "meiner Meinung nach | in my opinion"
+  },
+  {
+    "id": "de-auf-jeden-fall",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Ich melde mich auf jeden Fall.",
+    "expected": "auf jeden Fall | definitely"
+  },
+  {
+    "id": "de-auf-keinen-fall",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Das machen wir auf keinen Fall.",
+    "expected": "auf keinen Fall | under no circumstances"
+  },
+  {
+    "id": "de-im-moment-zurzeit",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Zurzeit bin ich verfügbar.",
+    "expected": "im Moment / zurzeit | at the moment"
+  },
+  {
+    "id": "de-in-der-regel",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "In der Regel antworte ich am selben Tag.",
+    "expected": "in der Regel | usually"
+  },
+  {
+    "id": "de-voraussichtlich",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Der Vertrag beginnt voraussichtlich im November.",
+    "expected": "voraussichtlich | probably, expected"
+  },
+  {
+    "id": "de-rechtzeitig",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Ich war nicht rechtzeitig da.",
+    "expected": "rechtzeitig | in time"
+  },
+  {
+    "id": "de-ungefaehr-etwa",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Das dauert ungefähr eine Stunde.",
+    "expected": "ungefähr / etwa | approximately"
+  },
+  {
+    "id": "de-selbstbewusst",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Ich habe selbstbewusst gewirkt.",
+    "expected": "selbstbewusst | self-confident"
+  },
+  {
+    "id": "de-zuverlaessig",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Sie ist sehr zuverlässig.",
+    "expected": "zuverlässig | reliable"
+  },
+  {
+    "id": "de-anspruchsvoll",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Das Projekt ist anspruchsvoll.",
+    "expected": "anspruchsvoll | demanding"
+  },
+  {
+    "id": "de-erforderlich",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Deutschkenntnisse sind erforderlich.",
+    "expected": "erforderlich | required"
+  },
+  {
+    "id": "de-ich-haette-gern",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Ich hätte gern einen Termin.",
+    "expected": "ich hätte gern | I would like"
+  },
+  {
+    "id": "de-ich-waere",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Ich wäre ab Montag verfügbar.",
+    "expected": "ich wäre | I would be"
+  },
+  {
+    "id": "de-koennten-sie",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Könnten Sie mir das schicken?",
+    "expected": "könnten Sie | could you"
+  },
+  {
+    "id": "de-es-waere-schoen",
+    "subject": "language",
+    "language": "de",
+    "kind": "vocab",
+    "category": "phrase",
+    "text": "Es wäre schön, wenn wir uns sehen könnten.",
+    "expected": "es wäre schön, wenn | it would be nice if"
   }
 ]
