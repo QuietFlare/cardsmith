@@ -9,36 +9,12 @@ import hashlib
 import json
 from pathlib import Path
 
+from cardsmith.report import by_category, summarise
 from cardsmith.score import score
 
 ROOT = Path(__file__).resolve().parent.parent
 PASSAGES = ROOT / "data" / "eval" / "passages.json"
 RESULTS = ROOT / "results"
-
-
-def summarise(records):
-    vocab = [r for r in records if r["kind"] == "vocab"]
-    qa = [r for r in records if r["kind"] == "qa"]
-    return {
-        "format_ok": f"{sum(r['format_ok'] for r in records)}/{len(records)}",
-        "duplicates": sum(r["duplicates"] for r in records),
-        "too_long": sum(r["too_long"] for r in records),
-        "facts": f"{sum(r['facts_covered'] for r in qa)}/{sum(r['facts_total'] for r in qa)}",
-        "correct": f"{sum(r['correct'] for r in vocab)}/{len(vocab)}",
-        "word": f"{sum(r['word_match'] for r in vocab)}/{len(vocab)}",
-        "phrase": f"{sum(r['phrase_match'] for r in vocab)}/{len(vocab)}",
-        "meaning": f"{sum(r['meaning_match'] for r in vocab)}/{len(vocab)}",
-    }
-
-
-def by_category(records):
-    """Vocab word matches per category, so one easy kind of word cannot hide a hard one."""
-    out = {}
-    for r in records:
-        if r["kind"] == "vocab":
-            hit, total = out.get(r["category"], (0, 0))
-            out[r["category"]] = (hit + r["word_match"], total + 1)
-    return {c: f"{hit}/{total}" for c, (hit, total) in sorted(out.items())}
 
 
 def main():
@@ -61,19 +37,22 @@ def main():
             "passages": records,
         }
 
-    columns = ["format_ok", "duplicates", "facts", "correct", "word", "meaning", "phrase"]
+    columns = ["format_ok", "duplicates", "facts", "correct", "selection", "knowledge", "meaning"]
     print(f"data version {data_version}\n")
     print(f"{'model':<14}" + "".join(f"{c:>12}" for c in columns))
     for name, entry in report["models"].items():
         print(f"{name:<14}" + "".join(f"{entry['summary'][c]:>12}" for c in columns))
 
     categories = sorted({c for e in report["models"].values() for c in e["vocab_by_category"]})
-    if categories:
-        print("\nvocab word matches by category")
+    for number in ("selection", "knowledge"):
+        if not categories:
+            break
+        print(f"\nvocab {number} by category")
         print(f"{'model':<14}" + "".join(f"{c:>12}" for c in categories))
         for name, entry in report["models"].items():
             row = entry["vocab_by_category"]
-            print(f"{name:<14}" + "".join(f"{row.get(c, '-'):>12}" for c in categories))
+            cells = (row[c][number] if c in row else "-" for c in categories)
+            print(f"{name:<14}" + "".join(f"{cell:>12}" for cell in cells))
 
     out = RESULTS / "scores.json"
     out.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

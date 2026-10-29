@@ -10,15 +10,28 @@
         "too_long": 0,
         "facts": "2/3",
         "correct": "7/99",
-        "word": "19/99",
+        "selection": "19/99",
+        "knowledge": "7/19",
         "phrase": "0/99",
         "meaning": "34/99"
       },
       "vocab_by_category": {
-        "noun": "3/28",
-        "phrase": "3/33",
-        "verb": "5/19",
-        "verb+case": "8/19"
+        "noun": {
+          "selection": "3/28",
+          "knowledge": "0/3"
+        },
+        "phrase": {
+          "selection": "3/33",
+          "knowledge": "2/3"
+        },
+        "verb": {
+          "selection": "5/19",
+          "knowledge": "2/5"
+        },
+        "verb+case": {
+          "selection": "8/19",
+          "knowledge": "3/8"
+        }
       },
       "passages": [
         {
@@ -1329,15 +1342,28 @@
         "too_long": 0,
         "facts": "0/3",
         "correct": "0/99",
-        "word": "0/99",
+        "selection": "0/99",
+        "knowledge": "0/0",
         "phrase": "0/99",
         "meaning": "0/99"
       },
       "vocab_by_category": {
-        "noun": "0/28",
-        "phrase": "0/33",
-        "verb": "0/19",
-        "verb+case": "0/19"
+        "noun": {
+          "selection": "0/28",
+          "knowledge": "0/0"
+        },
+        "phrase": {
+          "selection": "0/33",
+          "knowledge": "0/0"
+        },
+        "verb": {
+          "selection": "0/19",
+          "knowledge": "0/0"
+        },
+        "verb+case": {
+          "selection": "0/19",
+          "knowledge": "0/0"
+        }
       },
       "passages": [
         {
@@ -2648,15 +2674,28 @@
         "too_long": 0,
         "facts": "3/3",
         "correct": "1/99",
-        "word": "20/99",
+        "selection": "20/99",
+        "knowledge": "1/20",
         "phrase": "0/99",
         "meaning": "21/99"
       },
       "vocab_by_category": {
-        "noun": "8/28",
-        "phrase": "4/33",
-        "verb": "3/19",
-        "verb+case": "5/19"
+        "noun": {
+          "selection": "8/28",
+          "knowledge": "0/8"
+        },
+        "phrase": {
+          "selection": "4/33",
+          "knowledge": "0/4"
+        },
+        "verb": {
+          "selection": "3/19",
+          "knowledge": "1/3"
+        },
+        "verb+case": {
+          "selection": "5/19",
+          "knowledge": "0/5"
+        }
       },
       "passages": [
         {
@@ -3967,15 +4006,28 @@
         "too_long": 0,
         "facts": "0/3",
         "correct": "0/99",
-        "word": "0/99",
+        "selection": "0/99",
+        "knowledge": "0/0",
         "phrase": "0/99",
         "meaning": "0/99"
       },
       "vocab_by_category": {
-        "noun": "0/28",
-        "phrase": "0/33",
-        "verb": "0/19",
-        "verb+case": "0/19"
+        "noun": {
+          "selection": "0/28",
+          "knowledge": "0/0"
+        },
+        "phrase": {
+          "selection": "0/33",
+          "knowledge": "0/0"
+        },
+        "verb": {
+          "selection": "0/19",
+          "knowledge": "0/0"
+        },
+        "verb+case": {
+          "selection": "0/19",
+          "knowledge": "0/0"
+        }
       },
       "passages": [
         {
@@ -5286,15 +5338,28 @@
         "too_long": 0,
         "facts": "0/3",
         "correct": "6/99",
-        "word": "25/99",
+        "selection": "25/99",
+        "knowledge": "6/25",
         "phrase": "1/99",
         "meaning": "32/99"
       },
       "vocab_by_category": {
-        "noun": "11/28",
-        "phrase": "3/33",
-        "verb": "5/19",
-        "verb+case": "6/19"
+        "noun": {
+          "selection": "11/28",
+          "knowledge": "4/11"
+        },
+        "phrase": {
+          "selection": "3/33",
+          "knowledge": "1/3"
+        },
+        "verb": {
+          "selection": "5/19",
+          "knowledge": "1/5"
+        },
+        "verb+case": {
+          "selection": "6/19",
+          "knowledge": "0/6"
+        }
       },
       "passages": [
         {
@@ -6605,15 +6670,28 @@
         "too_long": 0,
         "facts": "0/3",
         "correct": "0/99",
-        "word": "0/99",
+        "selection": "0/99",
+        "knowledge": "0/0",
         "phrase": "0/99",
         "meaning": "0/99"
       },
       "vocab_by_category": {
-        "noun": "0/28",
-        "phrase": "0/33",
-        "verb": "0/19",
-        "verb+case": "0/19"
+        "noun": {
+          "selection": "0/28",
+          "knowledge": "0/0"
+        },
+        "phrase": {
+          "selection": "0/33",
+          "knowledge": "0/0"
+        },
+        "verb": {
+          "selection": "0/19",
+          "knowledge": "0/0"
+        },
+        "verb+case": {
+          "selection": "0/19",
+          "knowledge": "0/0"
+        }
       },
       "passages": [
         {
